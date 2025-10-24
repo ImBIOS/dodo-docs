@@ -1,936 +1,1017 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
-  "name": "Dodo Payments Documentation",
-  "colors": {
-    "primary": "#81B700",
-    "light": "#C6FE1E",
-    "dark": "#81B700"
-  },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
+    "$schema": "https://mintlify.com/docs.json",
+    "theme": "maple",
+    "name": "Dodo Payments Documentation",
+    "colors": {
+      "primary": "#81B700",
+      "light": "#C6FE1E",
+      "dark": "#81B700"
+    },
+    "favicon": "/favicon.svg",
+    "navigation": {
+      "tabs": [
+        {
+          "tab": "Setup & Features",
+          "icon": "rocket",
+          "groups": [
+            {
+              "group": "Getting Started",
+              "pages": [
+                "introduction",
+                "migrate-to-dodo"
+              ]
+            },
+            {
+              "group": "Features",
+              "pages": [
+                "features/products",
+                "features/one-time-payment-products",
+                {
+                  "group": "Subscriptions",
+                  "icon": "infinity",
+                  "pages": [
+                    "features/subscription",
+                    "features/addons",
+                    "guides/ondemand-subscriptions"
+                  ]
+                },
+                {
+                  "group": "Usage Based Billing",
+                  "icon": "arrow-trend-up",
+                  "tag": "NEW",
+                  "pages": [
+                    "features/usage-based-billing/introduction",
+                    "features/usage-based-billing/meters",
+                    "features/usage-based-billing/event-ingestion",
+                    "features/customer-credit",
+                    {
+                      "group": "Ingestion Blueprints",
+                      "icon": "copy",
+                      "pages": [
+                        "features/usage-based-billing/ingestion-blueprints",
+                        "guides/ingestion-blueprints/llm",
+                        "guides/ingestion-blueprints/api-gateway",
+                        "guides/ingestion-blueprints/object-storage",
+                        "guides/ingestion-blueprints/stream",
+                        "guides/ingestion-blueprints/time-range"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "group": "Customers",
+                  "icon": "user-group",
+                  "pages": [
+                    "features/customers",
+                    "features/customer-portal",
+                    "features/customer-wallet"
+                  ]
+                },
+                "features/discount-codes",
+                {
+                  "group": "Transactions",
+                  "icon": "credit-card",
+                  "pages": [
+                    "features/transactions/payments",
+                    "features/transactions/refunds",
+                    "features/transactions/disputes"
+                  ]
+                },
+                {
+                  "group": "Benefits",
+                  "icon": "gift",
+                  "pages": [
+                    "features/license-keys",
+                    "/features/digital-product-delivery"
+                  ]
+                },
+                {
+                  "group": "Payouts and Balances",
+                  "icon": "wallet",
+                  "pages": [
+                    "features/account-summary-payout-wallet",
+                    "/features/payouts/payout-structure"
+                  ]
+                },
+                {
+                  "group": "Account Management",
+                  "icon": "user",
+                  "pages": [
+                    "features/multi-brands",
+                    "features/invoice-generation",
+                    "features/team",
+                    "miscellaneous/accounts"
+                  ]
+                },
+                {
+                  "group": "Pricing",
+                  "icon": "dollar-sign",
+                  "pages": [
+                    "features/tax-inclusive-pricing",
+                    "features/pay-what-you-want",
+                    "features/b2b-payments",
+                    "features/purchasing-power-parity"
+                  ]
+                },
+                "features/adaptive-currency",
+                "features/analytics-and-reporting",
+                "features/storefront",
+                "features/affiliates",
+                "features/appstore-digital-goods"
+              ]
+            },
+            {
+              "group": "Integrate",
+              "pages": [
+                {
+                  "group": "Webhooks",
+                  "pages": [
+                    "features/webhooks",
+                    "features/webhooks/intents/webhook-events-guide",
+                    {
+                      "group": "Webhook Payloads",
+                      "icon": "code",
+                      "pages": [
+                        "features/webhooks/intents/payment",
+                        "features/webhooks/intents/subscription",
+                        "features/webhooks/intents/refund",
+                        "features/webhooks/intents/dispute",
+                        "features/webhooks/intents/license-key"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "group": "SDKs",
+                  "pages": [
+                    "features/dodo-payments-sdks",
+                    "features/react-native-integration",
+                    "features/supabase-boilerplate"
+                  ]
+                },
+                {
+                  "group": "Framework Adaptors",
+                  "pages": [
+                    "features/nextjs-adaptor",
+                    "features/nuxt-adaptor",
+                    "features/better-auth-adaptor",
+                    "features/express-adaptor",
+                    "features/astro-adaptor",
+                    "features/sveltekit-adaptor",
+                    "features/hono-adaptor",
+                    "features/remix-adaptor",
+                    "features/tanstack-adaptor",
+                    "features/fastify-adaptor",
+                    "features/convex-component"
+                  ]
+                },
+                {
+                  "group": "Testing & Demo Tools",
+                  "pages": [
+                    "miscellaneous/test-mode-vs-live-mode",
+                    "miscellaneous/testing-process",
+                    "features/atlas-demo-website"
+                  ]
+                }
+              ]
+            },
+            {
+              "group": "Merchant of Record",
+              "pages": [
+                "miscellaneous/verification-process",
+                "features/payment-methods",
+                "miscellaneous/list-of-countries-we-accept-payments-from",
+                "miscellaneous/merchant-acceptance",
+                "miscellaneous/review-monitoring-policy",
+                "features/mor-vs-pg",
+                "features/bypassing-app-store-fees"
+              ]
+            },
+            {
+              "group": "Miscellaneous",
+              "pages": [
+                {
+                  "group": "Support Channels",
+                  "icon": "headset",
+                  "pages": [
+                    "miscellaneous/help-support",
+                    "features/feature-request"
+                  ]
+                },
+                {
+                  "group": "GTM Tools",
+                  "icon": "chart-line",
+                  "pages": [
+                    "miscellaneous/gtm-tools/saas-pricing-calculator",
+                    "miscellaneous/gtm-tools/saas-revenue-and-profit-growth",
+                    "miscellaneous/gtm-tools/saas-kpi-measurement",
+                    "miscellaneous/gtm-tools/freemium-model",
+                    "miscellaneous/gtm-tools/feature-prioritization-tool"
+                  ]
+                },
+                "features/mobile-app",
+                "miscellaneous/faq",
+                "miscellaneous/security-policy"
+              ]
+            }
+          ]
+        },
+        {
+          "tab": "Guides",
+          "icon": "code",
+          "groups": [
+            {
+              "group": "Guides",
+              "pages": [
+                "guides/introduction"
+              ]
+            },
+            {
+              "group": "Integration Guides",
+              "pages": [
+                "guides/checkout-session",
+                "guides/usage-based-billing-guide",
+                "guides/integration-guide",
+                "guides/subscription-integration-guide",
+                "guides/subscription-upgrade-downgrade",
+                "guides/integration-tutorial",
+                "guides/overlay-checkout",
+                "guides/mobile-integration",
+                "guides/mcp-server"
+              ]
+            },
+            {
+              "group": "Cookbooks",
+              "tag": "New",
+              "pages": [
+                "guides/usage-based-billing-build-ai-image-generator",
+                "guides/seat-based-pricing",
+                "guides/build-an-ai-chat-app-with-usage-based-billing"
+              ]
+            }
+          ]
+        },
+        {
+          "tab": "API Reference",
+          "icon": "brackets-curly",
+          "groups": [
+            {
+              "group": "API Reference",
+              "pages": [
+                "api-reference/introduction",
+                "api-reference/error-codes",
+                "api-reference/transaction-failures",
+                "api-reference/metadata"
+              ]
+            },
+            {
+              "group": "Checkout Sessions",
+              "tag": "NEW",
+              "pages": [
+                "api-reference/checkout-sessions/create"
+              ]
+            },
+            {
+              "group": "Payments",
+              "pages": [
+                "api-reference/payments/get-payments",
+                "api-reference/payments/post-payments",
+                "api-reference/payments/get-payments-1",
+                "api-reference/payments/get-invoice",
+                "api-reference/payments/retrieve-line-items"
+              ]
+            },
+            {
+              "group": "Subscriptions",
+              "pages": [
+                "api-reference/subscriptions/get-subscriptions-1",
+                "api-reference/subscriptions/post-subscriptions",
+                "api-reference/subscriptions/get-subscriptions",
+                "api-reference/subscriptions/change-plan",
+                "api-reference/subscriptions/patch-subscriptions",
+                "api-reference/subscriptions/create-charge",
+                "api-reference/subscriptions/get-usage-history"
+              ]
+            },
+            {
+              "group": "Discounts",
+              "pages": [
+                "api-reference/discounts/list-discounts",
+                "api-reference/discounts/create-discount",
+                "api-reference/discounts/validate-discount",
+                "api-reference/discounts/update-discount",
+                "api-reference/discounts/delete-discount"
+              ]
+            },
+            {
+              "group": "Licenses",
+              "pages": [
+                "api-reference/licenses/activate-license",
+                "api-reference/licenses/deactivate-license",
+                "api-reference/licenses/validate-license",
+                "api-reference/licenses/get-license-keys",
+                "api-reference/licenses/get-license-key",
+                "api-reference/licenses/update-license-key",
+                "api-reference/licenses/get-license-key-instances",
+                "api-reference/licenses/get-license-key-instance",
+                "api-reference/licenses/update-license-key-instance"
+              ]
+            },
+            {
+              "group": "Customers",
+              "pages": [
+                "api-reference/customers/create-customer",
+                "api-reference/customers/get-customers",
+                "api-reference/customers/get-customers-1",
+                "api-reference/customers/patch-customer",
+                "api-reference/customers/create-customer-portal-session",
+                "api-reference/customers/get-customer-wallets",
+                "api-reference/customers/get-customer-wallets-ledger-entries",
+                "api-reference/customers/post-customer-wallets-ledger-entries"
+              ]
+            },
+            {
+              "group": "Products",
+              "pages": [
+                "api-reference/products/get-products",
+                "api-reference/products/post-products",
+                "api-reference/products/get-products-1",
+                "api-reference/products/patch-products",
+                "api-reference/products/put-products-images",
+                "api-reference/products/archive-product",
+                "api-reference/products/unarchive-product",
+                "api-reference/products/update-files"
+              ]
+            },
+            {
+              "group": "Addons",
+              "pages": [
+                "api-reference/addons/create-addon",
+                "api-reference/addons/list-addons",
+                "api-reference/addons/get-addon",
+                "api-reference/addons/update-addon",
+                "api-reference/addons/update-addon-images"
+              ]
+            },
+            {
+              "group": "Meters",
+              "tag": "BETA",
+              "pages": [
+                "api-reference/meters/create-meter",
+                "api-reference/meters/get-meters",
+                "api-reference/meters/retrieve-meter",
+                "api-reference/meters/archive-meter",
+                "api-reference/meters/unarchive-meter"
+              ]
+            },
+            {
+              "group": "Usage Events",
+              "tag": "BETA",
+              "pages": [
+                "api-reference/usage-events/ingest-events",
+                "api-reference/usage-events/get-event",
+                "api-reference/usage-events/list-events"
+              ]
+            },
+            {
+              "group": "Refunds",
+              "pages": [
+                "api-reference/refunds/get-refunds",
+                "api-reference/refunds/post-refunds",
+                "api-reference/refunds/get-refunds-1",
+                "api-reference/refunds/get-refund-receipt"
+              ]
+            },
+            {
+              "group": "Disputes",
+              "pages": [
+                "api-reference/disputes/get-disputes",
+                "api-reference/disputes/get-disputes-1"
+              ]
+            },
+            {
+              "group": "Payouts",
+              "pages": [
+                "api-reference/payouts/get-payouts"
+              ]
+            },
+            {
+              "group": "Brands",
+              "pages": [
+                "api-reference/brands/list-brands",
+                "api-reference/brands/create-brand",
+                "api-reference/brands/get-brand",
+                "api-reference/brands/update-brand",
+                "api-reference/brands/update-brand-images"
+              ]
+            },
+            {
+              "group": "Webhooks",
+              "pages": [
+                "api-reference/webhooks/list-webhooks",
+                "api-reference/webhooks/create-webhook",
+                "api-reference/webhooks/get-details",
+                "api-reference/webhooks/update-webhook",
+                "api-reference/webhooks/delete-webhook",
+                "api-reference/webhooks/get-webhook-headers",
+                "api-reference/webhooks/update-webhook-headers",
+                "api-reference/webhooks/get-webhook-signing-key"
+              ]
+            },
+            {
+              "group": "Miscellaneous",
+              "pages": [
+                "api-reference/misc/supported-countries",
+                "api-reference/misc/charge-subscriptions"
+              ]
+            }
+          ]
+        },
+        {
+          "tab": "External Integrations",
+          "icon": "plug",
+          "groups": [
+            {
+              "group": "External Integrations",
+              "pages": [
+                "integrations/introduction",
+                "integrations/woocommerce-plugin",
+                "integrations/framer-plugin",
+                "integrations/figma-plugin",
+                "integrations/raycast-extension"
+              ]
+            },
+            {
+              "group": "Messaging",
+              "pages": [
+                "integrations/slack",
+                "integrations/discord",
+                "integrations/microsoft-teams"
+              ]
+            },
+            {
+              "group": "Workflow Automation",
+              "pages": [
+                "integrations/zapier",
+                "integrations/windmill",
+                "integrations/inngest"
+              ]
+            },
+            {
+              "group": "CRM",
+              "pages": [
+                "integrations/hubspot",
+                "integrations/close-crm"
+              ]
+            },
+            {
+              "group": "Email",
+              "pages": [
+                "integrations/resend",
+                "integrations/loops",
+                "integrations/sendgrid"
+              ]
+            },
+            {
+              "group": "Analytics",
+              "pages": [
+                "integrations/segment",
+                "integrations/customer-io"
+              ]
+            }
+          ]
+        },
+        {
+          "tab": "Changelog",
+          "icon": "cash-register",
+          "groups": [
+            {
+              "group": "Changelog",
+              "pages": [
+                "changelog/introduction"
+              ]
+            },
+            {
+              "group": "September 2025",
+              "pages": [
+                "changelog/v1.53.2",
+                "changelog/v1.52.4"
+              ]
+            },
+            {
+              "group": "August 2025",
+              "pages": [
+                "changelog/v1.51.0",
+                "changelog/v1.47.0",
+                "changelog/v1.44.0"
+              ]
+            },
+            {
+              "group": "July 2025",
+              "pages": [
+                "changelog/v1.43.0",
+                "changelog/v1.38.0",
+                "changelog/v1.37.0"
+              ]
+            },
+            {
+              "group": "June 2025",
+              "pages": [
+                "changelog/v1.34.4",
+                "changelog/v1.34.0",
+                "changelog/v1.32.0",
+                "changelog/v1.30.0"
+              ]
+            },
+            {
+              "group": "May 2025",
+              "pages": [
+                "changelog/v1.27.0",
+                "changelog/v1.25.0",
+                "changelog/v1.22.0",
+                "changelog/v1.21.0"
+              ]
+            },
+            {
+              "group": "April 2025",
+              "pages": [
+                "changelog/v1.18.3",
+                "changelog/v1.16.1",
+                "changelog/v1.14.0",
+                "changelog/v1.13.0"
+              ]
+            },
+            {
+              "group": "March 2025",
+              "pages": [
+                "changelog/v1.11.0",
+                "changelog/v1.10.1",
+                "changelog/v1.7.0",
+                "changelog/v1.5.0",
+                "changelog/v1.4.0"
+              ]
+            },
+            {
+              "group": "February 2025",
+              "pages": [
+                "changelog/v1.3.2",
+                "changelog/v1.0.0",
+                "changelog/v0.24.0",
+                "changelog/v0.22.0"
+              ]
+            },
+            {
+              "group": "January 2025",
+              "pages": [
+                "changelog/v0.20.1",
+                "changelog/v0.19.0",
+                "changelog/v0.18.0",
+                "changelog/v0.16.1",
+                "changelog/v0.15.1"
+              ]
+            },
+            {
+              "group": "December 2024",
+              "pages": [
+                "changelog/v0.14.0",
+                "changelog/v0.13.2",
+                "changelog/v0.12.0",
+                "changelog/v0.11.0",
+                "changelog/v0.10.0"
+              ]
+            },
+            {
+              "group": "November 2024",
+              "pages": [
+                "changelog/v0.1.0"
+              ]
+            }
+          ]
+        },
+        {
+          "tab": "Community Projects",
+          "icon": "users",
+          "groups": [
+            {
+              "group": "Community Projects",
+              "pages": [
+                "community/overview",
+                "community/projects",
+                "community/submit"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "logo": {
+      "light": "/logo/light.svg",
+      "dark": "/logo/dark.svg"
+    },
+    "background": {
+      "decoration": "grid",
+      "color": {
+        "light": "#ffffff",
+        "dark": "#0D0D0D"
+      }
+    },
+    "navbar": {
+      "links": [
+        {
+          "label": "llms-full.txt",
+          "icon": "link",
+          "href": "https://docs.dodopayments.com/llms-full.txt"
+        },
+        {
+          "label": "Community",
+          "icon": "discord",
+          "href": "https://discord.gg/bYqAp4ayYh"
+        },
+        {
+          "icon": "house",
+          "label": "Dashboard",
+          "href": "https://app.dodopayments.com/"
+        }
+      ]
+    },
+    "footer": {
+      "socials": {
+        "x": "https://x.com/dodopayments",
+        "linkedin": "https://linkedin.com/company/dodopayments",
+        "website": "https://dodopayments.com",
+        "discord": "https://discord.gg/bYqAp4ayYh",
+        "github": "https://github.com/dodopayments",
+        "instagram": "https://www.instagram.com/dodo.payments/",
+        "facebook": "https://www.facebook.com/profile.php?id=61565515607280"
+      }
+    },
+    "integrations": {
+      "posthog": {
+        "apiKey": "phc_PKmKZdTXTQAMSPrUW8GYilHH21CLw9qXJKZzUYen12W",
+        "apiHost": "https://pineapple.dodopayments.com"
+      },
+      "intercom": {
+        "appId": "tfs7xdc0"
+      }
+    },
+    "contextual": {
+      "options": [
+        "copy",
+        "view",
+        "chatgpt",
+        "claude",
+        "perplexity",
+        "cursor"
+      ]
+    },
+    "redirects": [
       {
-        "tab": "Setup & Features",
-        "icon": "rocket",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "pages": [
-              "introduction",
-              "migrate-to-dodo"
-            ]
-          },
-          {
-            "group": "Features",
-            "pages": [
-              "features/products",
-              "features/one-time-payment-products",
-              {
-                "group": "Subscriptions",
-                "icon": "infinity",
-                "pages": [
-                  "features/subscription",
-                  "features/addons",
-                  "developer-resources/ondemand-subscriptions"
-                ]
-              },
-              {
-                "group": "Usage Based Billing",
-                "icon": "arrow-trend-up",
-                "tag": "NEW",
-                "pages": [
-                  "features/usage-based-billing/introduction",
-                  "features/usage-based-billing/meters",
-                  "features/usage-based-billing/event-ingestion",
-                  "features/customer-credit",
-                  {
-                    "group": "Ingestion Blueprints",
-                    "icon": "copy",
-                    "pages": [
-                      "features/usage-based-billing/ingestion-blueprints",
-                      "developer-resources/ingestion-blueprints/llm",
-                      "developer-resources/ingestion-blueprints/api-gateway",
-                      "developer-resources/ingestion-blueprints/object-storage",
-                      "developer-resources/ingestion-blueprints/stream",
-                      "developer-resources/ingestion-blueprints/time-range"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Customers",
-                "icon": "user-group",
-                "pages": [
-                  "features/customers",
-                  "features/customer-portal",
-                  "features/customer-wallet"
-                ]
-              },
-              "features/discount-codes",
-              {
-                "group": "Transactions",
-                "icon": "credit-card",
-                "pages": [
-                  "features/transactions/payments",
-                  "features/transactions/refunds",
-                  "features/transactions/disputes"
-                ]
-              },
-              {
-                "group": "Benefits",
-                "icon": "gift",
-                "pages": [
-                  "features/license-keys",
-                  "/features/digital-product-delivery"
-                ]
-              },
-              {
-                "group": "Payouts and Balances",
-                "icon": "wallet",
-                "pages": [
-                  "features/account-summary-payout-wallet",
-                  "/features/payouts/payout-structure"
-                ]
-              },
-              {
-                "group": "Account Management",
-                "icon": "user",
-                "pages": [
-                  "features/multi-brands",
-                  "features/invoice-generation",
-                  "features/team",
-                  "miscellaneous/accounts"
-                ]
-              },
-              {
-                "group": "Pricing",
-                "icon": "dollar-sign",
-                "pages": [
-                  "features/tax-inclusive-pricing",
-                  "features/pay-what-you-want",
-                  "features/b2b-payments",
-                  "features/purchasing-power-parity"
-                ]
-              },
-              "features/adaptive-currency",
-              "features/analytics-and-reporting",
-              "features/storefront",
-              "features/affiliates",
-              "features/appstore-digital-goods"
-            ]
-          },
-          {
-            "group": "Merchant of Record",
-            "pages": [
-              "miscellaneous/verification-process",
-              "features/payment-methods",
-              "miscellaneous/list-of-countries-we-accept-payments-from",
-              "miscellaneous/merchant-acceptance",
-              "miscellaneous/review-monitoring-policy",
-              "features/mor-vs-pg",
-              "features/bypassing-app-store-fees"
-            ]
-          },
-          {
-            "group": "Miscellaneous",
-            "pages": [
-              {
-                "group": "Support Channels",
-                "icon": "headset",
-                "pages": [
-                  "miscellaneous/help-support",
-                  "features/feature-request"
-                ]
-              },
-              {
-                "group": "GTM Tools",
-                "icon": "chart-line",
-                "pages": [
-                  "miscellaneous/gtm-tools/saas-pricing-calculator",
-                  "miscellaneous/gtm-tools/saas-revenue-and-profit-growth",
-                  "miscellaneous/gtm-tools/saas-kpi-measurement",
-                  "miscellaneous/gtm-tools/freemium-model",
-                  "miscellaneous/gtm-tools/feature-prioritization-tool"
-                ]
-              },
-              "features/mobile-app",
-              "miscellaneous/faq",
-              "miscellaneous/security-policy"
-            ]
-          }
-        ]
+        "source": "/features/usage-based-billing",
+        "destination": "/features/usage-based-billing/introduction"
       },
       {
-        "tab": "Developer Resources",
-        "icon": "code",
-        "groups": [
-          {
-            "group": "Developer Resources",
-            "pages": [
-              "developer-resources/introduction"
-            ]
-          },
-          {
-            "group": "Integration Guides",
-            "pages": [
-              "developer-resources/checkout-session",
-              "developer-resources/usage-based-billing-guide",
-              "developer-resources/integration-guide",
-              "developer-resources/subscription-integration-guide",
-              "developer-resources/subscription-upgrade-downgrade",
-              "developer-resources/integration-tutorial",
-              "developer-resources/overlay-checkout",
-              "developer-resources/mobile-integration",
-              "developer-resources/mcp-server"
-            ]
-          },
-          {
-            "group": "Webhooks",
-            "pages": [
-              "developer-resources/webhooks",
-              "developer-resources/webhooks/intents/webhook-events-guide",
-              {
-                "group": "Webhook Payloads",
-                "icon": "code",
-                "pages": [
-                  "developer-resources/webhooks/intents/payment",
-                  "developer-resources/webhooks/intents/subscription",
-                  "developer-resources/webhooks/intents/refund",
-                  "developer-resources/webhooks/intents/dispute",
-                  "developer-resources/webhooks/intents/license-key"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Cookbooks",
-            "tag": "New",
-            "pages": [
-              "developer-resources/usage-based-billing-build-ai-image-generator",
-              "developer-resources/seat-based-pricing",
-              "developer-resources/build-an-ai-chat-app-with-usage-based-billing"
-            ]
-          },
-          {
-            "group": "Testing & Demo Tools",
-            "pages": [
-              "miscellaneous/test-mode-vs-live-mode",
-              "miscellaneous/testing-process",
-              "features/atlas-demo-website"
-            ]
-          },
-          {
-            "group": "SDKs",
-            "pages": [
-              "developer-resources/dodo-payments-sdks",
-              "developer-resources/react-native-integration",
-              "developer-resources/supabase-boilerplate"
-            ]
-          },
-          {
-            "group": "Framework Adaptors",
-            "pages": [
-              "developer-resources/nextjs-adaptor",
-              "developer-resources/nuxt-adaptor",
-              "developer-resources/better-auth-adaptor",
-              "developer-resources/express-adaptor",
-              "developer-resources/astro-adaptor",
-              "developer-resources/sveltekit-adaptor",
-              "developer-resources/hono-adaptor",
-              "developer-resources/remix-adaptor",
-              "developer-resources/tanstack-adaptor",
-              "developer-resources/fastify-adaptor",
-              "developer-resources/convex-component"
-            ]
-          }
-        ]
+        "source": "/guides/license",
+        "destination": "/features/license-keys"
       },
       {
-        "tab": "API Reference",
-        "icon": "brackets-curly",
-        "groups": [
-          {
-            "group": "API Reference",
-            "pages": [
-              "api-reference/introduction",
-              "api-reference/error-codes",
-              "api-reference/transaction-failures",
-              "api-reference/metadata"
-            ]
-          },
-          {
-            "group": "Checkout Sessions",
-            "tag": "NEW",
-            "pages": [
-              "api-reference/checkout-sessions/create"
-            ]
-          },
-          {
-            "group": "Payments",
-            "pages": [
-              "api-reference/payments/get-payments",
-              "api-reference/payments/post-payments",
-              "api-reference/payments/get-payments-1",
-              "api-reference/payments/get-invoice",
-              "api-reference/payments/retrieve-line-items"
-            ]
-          },
-          {
-            "group": "Subscriptions",
-            "pages": [
-              "api-reference/subscriptions/get-subscriptions-1",
-              "api-reference/subscriptions/post-subscriptions",
-              "api-reference/subscriptions/get-subscriptions",
-              "api-reference/subscriptions/change-plan",
-              "api-reference/subscriptions/patch-subscriptions",
-              "api-reference/subscriptions/create-charge",
-              "api-reference/subscriptions/get-usage-history"
-            ]
-          },
-          {
-            "group": "Discounts",
-            "pages": [
-              "api-reference/discounts/list-discounts",
-              "api-reference/discounts/create-discount",
-              "api-reference/discounts/validate-discount",
-              "api-reference/discounts/update-discount",
-              "api-reference/discounts/delete-discount"
-            ]
-          },
-          {
-            "group": "Licenses",
-            "pages": [
-              "api-reference/licenses/activate-license",
-              "api-reference/licenses/deactivate-license",
-              "api-reference/licenses/validate-license",
-              "api-reference/licenses/get-license-keys",
-              "api-reference/licenses/get-license-key",
-              "api-reference/licenses/update-license-key",
-              "api-reference/licenses/get-license-key-instances",
-              "api-reference/licenses/get-license-key-instance",
-              "api-reference/licenses/update-license-key-instance"
-            ]
-          },
-          {
-            "group": "Customers",
-            "pages": [
-              "api-reference/customers/create-customer",
-              "api-reference/customers/get-customers",
-              "api-reference/customers/get-customers-1",
-              "api-reference/customers/patch-customer",
-              "api-reference/customers/create-customer-portal-session",
-              "api-reference/customers/get-customer-wallets",
-              "api-reference/customers/get-customer-wallets-ledger-entries",
-              "api-reference/customers/post-customer-wallets-ledger-entries"
-            ]
-          },
-          {
-            "group": "Products",
-            "pages": [
-              "api-reference/products/get-products",
-              "api-reference/products/post-products",
-              "api-reference/products/get-products-1",
-              "api-reference/products/patch-products",
-              "api-reference/products/put-products-images",
-              "api-reference/products/archive-product",
-              "api-reference/products/unarchive-product",
-              "api-reference/products/update-files"
-            ]
-          },
-          {
-            "group": "Addons",
-            "pages": [
-              "api-reference/addons/create-addon",
-              "api-reference/addons/list-addons",
-              "api-reference/addons/get-addon",
-              "api-reference/addons/update-addon",
-              "api-reference/addons/update-addon-images"
-            ]
-          },
-          {
-            "group": "Meters",
-            "tag": "BETA",
-            "pages": [
-              "api-reference/meters/create-meter",
-              "api-reference/meters/get-meters",
-              "api-reference/meters/retrieve-meter",
-              "api-reference/meters/archive-meter",
-              "api-reference/meters/unarchive-meter"
-            ]
-          },
-          {
-            "group": "Usage Events",
-            "tag": "BETA",
-            "pages": [
-              "api-reference/usage-events/ingest-events",
-              "api-reference/usage-events/get-event",
-              "api-reference/usage-events/list-events"
-            ]
-          },
-          {
-            "group": "Refunds",
-            "pages": [
-              "api-reference/refunds/get-refunds",
-              "api-reference/refunds/post-refunds",
-              "api-reference/refunds/get-refunds-1",
-              "api-reference/refunds/get-refund-receipt"
-            ]
-          },
-          {
-            "group": "Disputes",
-            "pages": [
-              "api-reference/disputes/get-disputes",
-              "api-reference/disputes/get-disputes-1"
-            ]
-          },
-          {
-            "group": "Payouts",
-            "pages": [
-              "api-reference/payouts/get-payouts"
-            ]
-          },
-          {
-            "group": "Brands",
-            "pages": [
-              "api-reference/brands/list-brands",
-              "api-reference/brands/create-brand",
-              "api-reference/brands/get-brand",
-              "api-reference/brands/update-brand",
-              "api-reference/brands/update-brand-images"
-            ]
-          },
-          {
-            "group": "Webhooks",
-            "pages": [
-              "api-reference/webhooks/list-webhooks",
-              "api-reference/webhooks/create-webhook",
-              "api-reference/webhooks/get-details",
-              "api-reference/webhooks/update-webhook",
-              "api-reference/webhooks/delete-webhook",
-              "api-reference/webhooks/get-webhook-headers",
-              "api-reference/webhooks/update-webhook-headers",
-              "api-reference/webhooks/get-webhook-signing-key"
-            ]
-          },
-          {
-            "group": "Miscellaneous",
-            "pages": [
-              "api-reference/misc/supported-countries",
-              "api-reference/misc/charge-subscriptions"
-            ]
-          }
-        ]
+        "source": "/guides/login",
+        "destination": "/introduction"
       },
       {
-        "tab": "External Integrations",
-        "icon": "plug",
-        "groups": [
-          {
-            "group": "External Integrations",
-            "pages": [
-              "integrations/introduction",
-              "integrations/woocommerce-plugin",
-              "integrations/framer-plugin",
-              "integrations/figma-plugin",
-              "integrations/raycast-extension"
-            ]
-          },
-          {
-            "group": "Messaging",
-            "pages": [
-              "integrations/slack",
-              "integrations/discord",
-              "integrations/microsoft-teams"
-            ]
-          },
-          {
-            "group": "Workflow Automation",
-            "pages": [
-              "integrations/zapier",
-              "integrations/windmill",
-              "integrations/inngest"
-            ]
-          },
-          {
-            "group": "CRM",
-            "pages": [
-              "integrations/hubspot",
-              "integrations/close-crm"
-            ]
-          },
-          {
-            "group": "Email",
-            "pages": [
-              "integrations/resend",
-              "integrations/loops",
-              "integrations/sendgrid"
-            ]
-          },
-          {
-            "group": "Analytics",
-            "pages": [
-              "integrations/segment",
-              "integrations/customer-io"
-            ]
-          }
-        ]
+        "source": "/guides/identity-verification",
+        "destination": "/miscellaneous/verification-process"
       },
       {
-        "tab": "Changelog",
-        "icon": "cash-register",
-        "groups": [
-          {
-            "group": "Changelog",
-            "pages": [
-              "changelog/introduction"
-            ]
-          },
-          {
-            "group": "September 2025",
-            "pages": [
-              "changelog/v1.53.2",
-              "changelog/v1.52.4"
-            ]
-          },
-          {
-            "group": "August 2025",
-            "pages": [
-              "changelog/v1.51.0",
-              "changelog/v1.47.0",
-              "changelog/v1.44.0"
-            ]
-          },
-          {
-            "group": "July 2025",
-            "pages": [
-              "changelog/v1.43.0",
-              "changelog/v1.38.0",
-              "changelog/v1.37.0"
-            ]
-          },
-          {
-            "group": "June 2025",
-            "pages": [
-              "changelog/v1.34.4",
-              "changelog/v1.34.0",
-              "changelog/v1.32.0",
-              "changelog/v1.30.0"
-            ]
-          },
-          {
-            "group": "May 2025",
-            "pages": [
-              "changelog/v1.27.0",
-              "changelog/v1.25.0",
-              "changelog/v1.22.0",
-              "changelog/v1.21.0"
-            ]
-          },
-          {
-            "group": "April 2025",
-            "pages": [
-              "changelog/v1.18.3",
-              "changelog/v1.16.1",
-              "changelog/v1.14.0",
-              "changelog/v1.13.0"
-            ]
-          },
-          {
-            "group": "March 2025",
-            "pages": [
-              "changelog/v1.11.0",
-              "changelog/v1.10.1",
-              "changelog/v1.7.0",
-              "changelog/v1.5.0",
-              "changelog/v1.4.0"
-            ]
-          },
-          {
-            "group": "February 2025",
-            "pages": [
-              "changelog/v1.3.2",
-              "changelog/v1.0.0",
-              "changelog/v0.24.0",
-              "changelog/v0.22.0"
-            ]
-          },
-          {
-            "group": "January 2025",
-            "pages": [
-              "changelog/v0.20.1",
-              "changelog/v0.19.0",
-              "changelog/v0.18.0",
-              "changelog/v0.16.1",
-              "changelog/v0.15.1"
-            ]
-          },
-          {
-            "group": "December 2024",
-            "pages": [
-              "changelog/v0.14.0",
-              "changelog/v0.13.2",
-              "changelog/v0.12.0",
-              "changelog/v0.11.0",
-              "changelog/v0.10.0"
-            ]
-          },
-          {
-            "group": "November 2024",
-            "pages": [
-              "changelog/v0.1.0"
-            ]
-          }
-        ]
+        "source": "/guides/business-verification",
+        "destination": "/miscellaneous/verification-process"
       },
       {
-        "tab": "Community Projects",
-        "icon": "users",
-        "groups": [
-          {
-            "group": "Community Projects",
-            "pages": [
-              "community/overview",
-              "community/projects",
-              "community/submit"
-            ]
-          }
-        ]
+        "source": "/guides/one-time-product",
+        "destination": "/features/one-time-payment-products"
+      },
+      {
+        "source": "/guides/subscription-product",
+        "destination": "/features/subscription"
+      },
+      {
+        "source": "/guides/payment-links-guide",
+        "destination": "/features/transactions/payments"
+      },
+      {
+        "source": "/guides/checkout-process",
+        "destination": "/features/transactions/payments"
+      },
+      {
+        "source": "/guides/payments-guide",
+        "destination": "/features/transactions/payments"
+      },
+      {
+        "source": "/guides/refund-guide",
+        "destination": "/features/transactions/refunds"
+      },
+      {
+        "source": "/guides/disputes",
+        "destination": "/features/transactions/disputes"
+      },
+      {
+        "source": "/guides/reports",
+        "destination": "/features/analytics-and-reporting"
+      },
+      {
+        "source": "/guides/bank-account",
+        "destination": "/features/payouts/link-bank-account"
+      },
+      {
+        "source": "/guides/payout-compliance",
+        "destination": "/features/payouts/compliance"
+      },
+      {
+        "source": "/guides/business-profile",
+        "destination": "/miscellaneous/accounts"
+      },
+      {
+        "source": "/guides/user-profile",
+        "destination": "/miscellaneous/accounts"
+      },
+      {
+        "source": "/api-reference/webhooks/intents/webhook-events-guide",
+        "destination": "/features/webhooks/intents/webhook-events-guide"
+      },
+      {
+        "source": "/api-reference/webhooks/intents/payment",
+        "destination": "/features/webhooks/intents/payment"
+      },
+      {
+        "source": "/api-reference/webhooks/intents/subscription",
+        "destination": "/features/webhooks/intents/subscription"
+      },
+      {
+        "source": "/api-reference/webhooks/intents/refund",
+        "destination": "/features/webhooks/intents/refund"
+      },
+      {
+        "source": "/api-reference/webhooks/intents/dispute",
+        "destination": "/features/webhooks/intents/dispute"
+      },
+      {
+        "source": "/api-reference/webhooks/intents/license-key",
+        "destination": "/features/webhooks/intents/license-key"
+      },
+      {
+        "source": "/api-reference/integration-guide",
+        "destination": "/guides/integration-guide"
+      },
+      {
+        "source": "/api-reference/subscription-integration-guide",
+        "destination": "/guides/subscription-integration-guide"
+      },
+      {
+        "source": "/api-reference/integration-tutorial",
+        "destination": "/guides/integration-tutorial"
+      },
+      {
+        "source": "/api-reference/overlay-checkout",
+        "destination": "/guides/overlay-checkout"
+      },
+      {
+        "source": "/api-reference/managing-products",
+        "destination": "/features/products#managing-products"
+      },
+      {
+        "source": "/api-reference/license-keys-api-usage",
+        "destination": "/features/license-keys#api-management"
+      },
+      {
+        "source": "/guides/license-keys-api-usage",
+        "destination": "/features/license-keys#api-management"
+      },
+      {
+        "source": "/api-reference/allowed-payment-methods",
+        "destination": "/features/payment-methods#configuring-payment-methods"
+      },
+      {
+        "source": "/api-reference/dodo-payments-sdks",
+        "destination": "/guides/dodo-payments-sdks"
+      },
+      {
+        "source": "/api-reference/react-native-integration",
+        "destination": "/guides/react-native-integration"
+      },
+      {
+        "source": "/api-reference/mcp-server",
+        "destination": "/guides/mcp-server"
+      },
+      {
+        "source": "/api-reference/mobile-integration",
+        "destination": "/guides/mobile-integration"
+      },
+      {
+        "source": "/api-reference/mobile-integration-android",
+        "destination": "/developer-resources/mobile-integration"
+      },
+      {
+        "source": "/api-reference/mobile-integration-ios",
+        "destination": "/developer-resources/mobile-integration"
+      },
+      {
+        "source": "/api-reference/mobile-integration-flutter",
+        "destination": "/developer-resources/mobile-integration"
+      },
+      {
+        "source": "/features/woocommerce-plugin",
+        "destination": "/integrations/woocommerce-plugin"
+      },
+      {
+        "source": "/developer-resources/woocommerce-plugin",
+        "destination": "/integrations/woocommerce-plugin"
+      },
+      {
+        "source": "/quickstart",
+        "destination": "/introduction"
+      },
+      {
+        "source": "/features/dispute-best-practices",
+        "destination": "/features/transactions/disputes"
+      },
+      {
+        "source": "/features/upi",
+        "destination": "/features/payment-methods"
+      },
+      {
+        "source": "/features/api-keys",
+        "destination": "/api-reference/introduction"
+      },
+      {
+        "source": "/features/checkout-supported-countries",
+        "destination": "/miscellaneous/list-of-countries-we-accept-payments-from"
+      },
+      {
+        "source": "/api-reference/checkout/get-checkoutsupported_countries",
+        "destination": "/miscellaneous/list-of-countries-we-accept-payments-from"
+      },
+      {
+        "source": "/api-reference/on-demand-subscriptions",
+        "destination": "/features/subscription"
+      },
+      {
+        "source": "/api-reference/misc/charge-subscriptions",
+        "destination": "/features/subscription"
+      },
+      {
+        "source": "/api-reference/outgoing-webhooks/post-your-webhook-url",
+        "destination": "/features/webhooks"
+      },
+      {
+        "source": "/snippets/snippet-intro",
+        "destination": "/introduction"
+      },
+      {
+        "source": "/api-reference/technical-faqs",
+        "destination": "/miscellaneous/faq"
+      },
+      {
+        "source": "/features/product-catalog/pricing",
+        "destination": "/features/discount-codes"
+      },
+      {
+        "source": "/features/pricing",
+        "destination": "/features/discount-codes"
+      },
+      {
+        "source": "/miscellaneous/no-code",
+        "destination": "/introduction"
+      },
+      {
+        "source": "/guides/mobile-integration-android",
+        "destination": "/guides/mobile-integration"
+      },
+      {
+        "source": "/guides/mobile-integration-ios",
+        "destination": "/guides/mobile-integration"
+      },
+      {
+        "source": "/guides/mobile-integration-flutter",
+        "destination": "/guides/mobile-integration"
+      },
+      {
+        "source": "/features/gtm-tools/saas-pricing-calculator",
+        "destination": "/miscellaneous/gtm-tools/saas-pricing-calculator"
+      },
+      {
+        "source": "/features/gtm-tools/saas-revenue-and-profit-growth",
+        "destination": "/miscellaneous/gtm-tools/saas-revenue-and-profit-growth"
+      },
+      {
+        "source": "/features/gtm-tools/saas-kpi-measurement",
+        "destination": "/miscellaneous/gtm-tools/saas-kpi-measurement"
+      },
+      {
+        "source": "/features/gtm-tools/freemium-model",
+        "destination": "/miscellaneous/gtm-tools/freemium-model"
+      },
+      {
+        "source": "/features/gtm-tools/feature-prioritization-tool",
+        "destination": "/miscellaneous/gtm-tools/feature-prioritization-tool"
+      },
+      {
+        "source": "/features/payouts/compliance",
+        "destination": "/miscellaneous/verification-process"
+      },
+      {
+        "source": "/miscellaneous/tax-forms",
+        "destination": "/miscellaneous/verification-process"
+      },
+      {
+        "source": "/features/payouts/link-bank-account",
+        "destination": "/miscellaneous/verification-process"
+      },
+      {
+        "source": "/miscellaneous/pricing-and-fee-structure",
+        "destination": "https://dodopayments.com/pricing"
+      },
+      {
+        "source": "/developer-resources/webhooks",
+        "destination": "/features/webhooks"
+      },
+      {
+        "source": "/developer-resources/webhooks/intents/webhook-events-guide",
+        "destination": "/features/webhooks/intents/webhook-events-guide"
+      },
+      {
+        "source": "/developer-resources/webhooks/intents/payment",
+        "destination": "/features/webhooks/intents/payment"
+      },
+      {
+        "source": "/developer-resources/webhooks/intents/subscription",
+        "destination": "/features/webhooks/intents/subscription"
+      },
+      {
+        "source": "/developer-resources/webhooks/intents/refund",
+        "destination": "/features/webhooks/intents/refund"
+      },
+      {
+        "source": "/developer-resources/webhooks/intents/dispute",
+        "destination": "/features/webhooks/intents/dispute"
+      },
+      {
+        "source": "/developer-resources/webhooks/intents/license-key",
+        "destination": "/features/webhooks/intents/license-key"
+      },
+      {
+        "source": "/developer-resources/dodo-payments-sdks",
+        "destination": "/features/dodo-payments-sdks"
+      },
+      {
+        "source": "/developer-resources/react-native-integration",
+        "destination": "/features/react-native-integration"
+      },
+      {
+        "source": "/developer-resources/supabase-boilerplate",
+        "destination": "/features/supabase-boilerplate"
+      },
+      {
+        "source": "/developer-resources/nextjs-adaptor",
+        "destination": "/features/nextjs-adaptor"
+      },
+      {
+        "source": "/developer-resources/nuxt-adaptor",
+        "destination": "/features/nuxt-adaptor"
+      },
+      {
+        "source": "/developer-resources/better-auth-adaptor",
+        "destination": "/features/better-auth-adaptor"
+      },
+      {
+        "source": "/developer-resources/express-adaptor",
+        "destination": "/features/express-adaptor"
+      },
+      {
+        "source": "/developer-resources/astro-adaptor",
+        "destination": "/features/astro-adaptor"
+      },
+      {
+        "source": "/developer-resources/sveltekit-adaptor",
+        "destination": "/features/sveltekit-adaptor"
+      },
+      {
+        "source": "/developer-resources/hono-adaptor",
+        "destination": "/features/hono-adaptor"
+      },
+      {
+        "source": "/developer-resources/remix-adaptor",
+        "destination": "/features/remix-adaptor"
+      },
+      {
+        "source": "/developer-resources/tanstack-adaptor",
+        "destination": "/features/tanstack-adaptor"
+      },
+      {
+        "source": "/developer-resources/fastify-adaptor",
+        "destination": "/features/fastify-adaptor"
+      },
+      {
+        "source": "/developer-resources/convex-component",
+        "destination": "/features/convex-component"
       }
     ]
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "background": {
-    "decoration": "grid",
-    "color": {
-      "light": "#ffffff",
-      "dark": "#0D0D0D"
-    }
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "llms-full.txt",
-        "icon": "link",
-        "href": "https://docs.dodopayments.com/llms-full.txt"
-      },
-      {
-        "label": "Community",
-        "icon": "discord",
-        "href": "https://discord.gg/bYqAp4ayYh"
-      },
-      {
-        "icon": "house",
-        "label": "Dashboard",
-        "href": "https://app.dodopayments.com/"
-      }
-    ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/dodopayments",
-      "linkedin": "https://linkedin.com/company/dodopayments",
-      "website": "https://dodopayments.com",
-      "discord": "https://discord.gg/bYqAp4ayYh",
-      "github": "https://github.com/dodopayments",
-      "instagram": "https://www.instagram.com/dodo.payments/",
-      "facebook": "https://www.facebook.com/profile.php?id=61565515607280"
-    }
-  },
-  "integrations": {
-    "posthog": {
-      "apiKey": "phc_PKmKZdTXTQAMSPrUW8GYilHH21CLw9qXJKZzUYen12W",
-      "apiHost": "https://pineapple.dodopayments.com"
-    },
-    "intercom": {
-      "appId": "tfs7xdc0"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "cursor"
-    ]
-  },
-  "redirects": [
-    {
-      "source": "/features/usage-based-billing",
-      "destination": "/features/usage-based-billing/introduction"
-    },
-    {
-      "source": "/guides/license",
-      "destination": "/features/license-keys"
-    },
-    {
-      "source": "/guides/login",
-      "destination": "/introduction"
-    },
-    {
-      "source": "/guides/identity-verification",
-      "destination": "/miscellaneous/verification-process"
-    },
-    {
-      "source": "/guides/business-verification",
-      "destination": "/miscellaneous/verification-process"
-    },
-    {
-      "source": "/guides/one-time-product",
-      "destination": "/features/one-time-payment-products"
-    },
-    {
-      "source": "/guides/subscription-product",
-      "destination": "/features/subscription"
-    },
-    {
-      "source": "/guides/payment-links-guide",
-      "destination": "/features/transactions/payments"
-    },
-    {
-      "source": "/guides/checkout-process",
-      "destination": "/features/transactions/payments"
-    },
-    {
-      "source": "/guides/payments-guide",
-      "destination": "/features/transactions/payments"
-    },
-    {
-      "source": "/guides/refund-guide",
-      "destination": "/features/transactions/refunds"
-    },
-    {
-      "source": "/guides/disputes",
-      "destination": "/features/transactions/disputes"
-    },
-    {
-      "source": "/guides/reports",
-      "destination": "/features/analytics-and-reporting"
-    },
-    {
-      "source": "/guides/bank-account",
-      "destination": "/features/payouts/link-bank-account"
-    },
-    {
-      "source": "/guides/payout-compliance",
-      "destination": "/features/payouts/compliance"
-    },
-    {
-      "source": "/guides/business-profile",
-      "destination": "/miscellaneous/accounts"
-    },
-    {
-      "source": "/guides/user-profile",
-      "destination": "/miscellaneous/accounts"
-    },
-    {
-      "source": "/api-reference/webhooks/intents/webhook-events-guide",
-      "destination": "/developer-resources/webhooks/intents/webhook-events-guide"
-    },
-    {
-      "source": "/api-reference/webhooks/intents/payment",
-      "destination": "/developer-resources/webhooks/intents/payment"
-    },
-    {
-      "source": "/api-reference/webhooks/intents/subscription",
-      "destination": "/developer-resources/webhooks/intents/subscription"
-    },
-    {
-      "source": "/api-reference/webhooks/intents/refund",
-      "destination": "/developer-resources/webhooks/intents/refund"
-    },
-    {
-      "source": "/api-reference/webhooks/intents/dispute",
-      "destination": "/developer-resources/webhooks/intents/dispute"
-    },
-    {
-      "source": "/api-reference/webhooks/intents/license-key",
-      "destination": "/developer-resources/webhooks/intents/license-key"
-    },
-    {
-      "source": "/api-reference/integration-guide",
-      "destination": "/developer-resources/integration-guide"
-    },
-    {
-      "source": "/api-reference/subscription-integration-guide",
-      "destination": "/developer-resources/subscription-integration-guide"
-    },
-    {
-      "source": "/api-reference/integration-tutorial",
-      "destination": "/developer-resources/integration-tutorial"
-    },
-    {
-      "source": "/api-reference/overlay-checkout",
-      "destination": "/developer-resources/overlay-checkout"
-    },
-    {
-      "source": "/api-reference/managing-products",
-      "destination": "/features/products#managing-products"
-    },
-    {
-      "source": "/developer-resources/managing-products",
-      "destination": "/features/products#managing-products"
-    },
-    {
-      "source": "/api-reference/license-keys-api-usage",
-      "destination": "/features/license-keys#api-management"
-    },
-    {
-      "source": "/developer-resources/license-keys-api-usage",
-      "destination": "/features/license-keys#api-management"
-    },
-    {
-      "source": "/api-reference/allowed-payment-methods",
-      "destination": "/features/payment-methods#configuring-payment-methods"
-    },
-    {
-      "source": "/developer-resources/allowed-payment-methods",
-      "destination": "/features/payment-methods#configuring-payment-methods"
-    },
-    {
-      "source": "/api-reference/dodo-payments-sdks",
-      "destination": "/developer-resources/dodo-payments-sdks"
-    },
-    {
-      "source": "/api-reference/react-native-integration",
-      "destination": "/developer-resources/react-native-integration"
-    },
-    {
-      "source": "/api-reference/mcp-server",
-      "destination": "/developer-resources/mcp-server"
-    },
-    {
-      "source": "/api-reference/mobile-integration",
-      "destination": "/developer-resources/mobile-integration"
-    },
-    {
-      "source": "/api-reference/mobile-integration-android",
-      "destination": "/developer-resources/mobile-integration"
-    },
-    {
-      "source": "/api-reference/mobile-integration-ios",
-      "destination": "/developer-resources/mobile-integration"
-    },
-    {
-      "source": "/api-reference/mobile-integration-flutter",
-      "destination": "/developer-resources/mobile-integration"
-    },
-    {
-      "source": "/features/woocommerce-plugin",
-      "destination": "/integrations/woocommerce-plugin"
-    },
-    {
-      "source": "/developer-resources/woocommerce-plugin",
-      "destination": "/integrations/woocommerce-plugin"
-    },
-    {
-      "source": "/quickstart",
-      "destination": "/introduction"
-    },
-    {
-      "source": "/features/dispute-best-practices",
-      "destination": "/features/transactions/disputes"
-    },
-    {
-      "source": "/features/upi",
-      "destination": "/features/payment-methods"
-    },
-    {
-      "source": "/features/api-keys",
-      "destination": "/api-reference/introduction"
-    },
-    {
-      "source": "/features/checkout-supported-countries",
-      "destination": "/miscellaneous/list-of-countries-we-accept-payments-from"
-    },
-    {
-      "source": "/api-reference/checkout/get-checkoutsupported_countries",
-      "destination": "/miscellaneous/list-of-countries-we-accept-payments-from"
-    },
-    {
-      "source": "/api-reference/on-demand-subscriptions",
-      "destination": "/features/subscription"
-    },
-    {
-      "source": "/api-reference/misc/charge-subscriptions",
-      "destination": "/features/subscription"
-    },
-    {
-      "source": "/api-reference/outgoing-webhooks/post-your-webhook-url",
-      "destination": "/developer-resources/webhooks"
-    },
-    {
-      "source": "/snippets/snippet-intro",
-      "destination": "/introduction"
-    },
-    {
-      "source": "/api-reference/technical-faqs",
-      "destination": "/miscellaneous/faq"
-    },
-    {
-      "source": "/features/product-catalog/pricing",
-      "destination": "/features/discount-codes"
-    },
-    {
-      "source": "/features/pricing",
-      "destination": "/features/discount-codes"
-    },
-    {
-      "source": "/miscellaneous/no-code",
-      "destination": "/introduction"
-    },
-    {
-      "source": "/developer-resources/mobile-integration-android",
-      "destination": "/developer-resources/mobile-integration"
-    },
-    {
-      "source": "/developer-resources/mobile-integration-ios",
-      "destination": "/developer-resources/mobile-integration"
-    },
-    {
-      "source": "/developer-resources/mobile-integration-flutter",
-      "destination": "/developer-resources/mobile-integration"
-    },
-    {
-      "source": "/features/gtm-tools/saas-pricing-calculator",
-      "destination": "/miscellaneous/gtm-tools/saas-pricing-calculator"
-    },
-    {
-      "source": "/features/gtm-tools/saas-revenue-and-profit-growth",
-      "destination": "/miscellaneous/gtm-tools/saas-revenue-and-profit-growth"
-    },
-    {
-      "source": "/features/gtm-tools/saas-kpi-measurement",
-      "destination": "/miscellaneous/gtm-tools/saas-kpi-measurement"
-    },
-    {
-      "source": "/features/gtm-tools/freemium-model",
-      "destination": "/miscellaneous/gtm-tools/freemium-model"
-    },
-    {
-      "source": "/features/gtm-tools/feature-prioritization-tool",
-      "destination": "/miscellaneous/gtm-tools/feature-prioritization-tool"
-    },
-    {
-      "source": "/features/payouts/compliance",
-      "destination": "/miscellaneous/verification-process"
-    },
-    {
-      "source": "/miscellaneous/tax-forms",
-      "destination": "/miscellaneous/verification-process"
-    },
-    {
-      "source": "/features/payouts/link-bank-account",
-      "destination": "/miscellaneous/verification-process"
-    },
-    {
-      "source": "/miscellaneous/pricing-and-fee-structure",
-      "destination": "https://dodopayments.com/pricing"
-    }
-  ]
-}
+  }
